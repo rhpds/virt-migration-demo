@@ -1,1 +1,1 @@
-* xref:module-01.adoc[OpenShift Migration Demo]
+* xref:module-01.adoc[Demo Guide]
