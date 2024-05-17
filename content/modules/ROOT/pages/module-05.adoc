@@ -44,20 +44,20 @@ We will navigate to the VMware vCenter and take note of the names of the virtual
 
 . Navigate to VMware vCenter: https://{vcenter_console}[vCenter Console^]
 +
-image::module-05/NN_Launch_VSphere.png[link=self, window=blank, width=30%]
+image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 . Click *LAUNCH VSPHERE CLIENT*
 . Login with the following credentials:
 - *User:* {vcenter_user}
 - *Password:* {vcenter_password}
 +
-image::module-05/NN_VSphere_Login.png[link=self, window=blank, width=30%]
+image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
 . By default you'll land in the *Inventory* view at the top of the navigation tree.
 Click the *Workloads* icon and expand the navigation tree until you see the folder that matches your username, and the 4 VMs under it.
 Click the *VMs* tab at the top of the screen to view the VM details.
 +
-image::module-05/00_Workload_VM_List.png[link=self, window=blank, width=100%]
+image::module-01/00_Workload_VM_List.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
@@ -67,7 +67,7 @@ Let's look at one of the virtual machines, and validate that it is a Windows Ope
 
 . Click `winweb01` in the list of virtual machines.
 +
-image::module-05/NN_VSphere_VM_Details.png[link=self, window=blank, width=100%]
+image::module-01/NN_vSphere_VM_Details.png[link=self, window=blank, width=100%]
 
 == Migration Toolkit for Virtualization
 
@@ -87,7 +87,7 @@ Let's have a look at them now.
 +
 link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Provider[Provider List Screen]
 +
-image::module-05/NN_Virtualization_Console_Login.png[link=self, window=blank, width=30%]
+image::module-01/NN_Virtualization_Console_Login.png[link=self, window=blank, width=30%]
 +
 . Administrator login is available with:
 
@@ -96,7 +96,7 @@ image::module-05/NN_Virtualization_Console_Login.png[link=self, window=blank, wi
 +
 . You will be taken directly to the list of migration providers.
 
-image::module-05/NN_Migration_Providers.png[link=self, window=blank, width=80%]
+image::module-01/NN_Migration_Providers.png[link=self, window=blank, width=80%]
 
 *SAY:*
 
@@ -123,17 +123,17 @@ Before we start, let's create an OpenShift Project to hold our VMs.
 +
 link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Project[Link to Create Project Page]
 +
-image::module-05/NN_Create_Project.png[link=self, window=blank, width=100%]
+image::module-01/NN_Create_Project.png[link=self, window=blank, width=100%]
 +
 . Name the project *vmexamples*.
 +
-image::module-05/NN_Create_Project_Modal.png[link=self, window=blank, width=30%]
+image::module-01/NN_Create_Project_Modal.png[link=self, window=blank, width=30%]
 +
 . Click *Create*.
 +
 . Set into the `openshift-mtv` namespace again to continue.
 +
-image::module-05/NN_Select_openshift-mtv_Project.png[link=self, window=blank, width=40%]
+image::module-01/NN_Select_openshift-mtv_Project.png[link=self, window=blank, width=40%]
 ////
 
 *SAY:*
@@ -148,12 +148,12 @@ First, we'll create a plan that indicates the source provider, *VMware* and the 
 +
 link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan[Link to Create Migration Plan]
 +
-image::module-05/NN_Create_VMWARE_Plan.png[link=self, window=blank, width=100%]
+image::module-01/NN_Create_VMware_Plan.png[link=self, window=blank, width=100%]
 +
 . You will be asked to select the source provider that you intend to migrate from.
 Click on the *VMware* tile, and the next page will open immediately.
 +
-image::module-05/NN_VMware_Source_Provider.png[link=self, window=blank, width=50%]
+image::module-01/NN_VMware_Source_Provider.png[link=self, window=blank, width=50%]
 
 *SAY:*
 
@@ -172,7 +172,7 @@ We have VMs that are already migrated to show.
 
 . Click *Next*.
 +
-image::module-05/NN_Create_Migration_Plan_2.png[link=self, window=blank, width=80%]
+image::module-01/NN_Create_Migration_Plan_2.png[link=self, window=blank, width=80%]
 
 *SAY:*
 
@@ -195,7 +195,7 @@ You will just need to make sure that their respective values are set correctly o
 +
 . Click *Create migration plan*.
 +
-image::module-05/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=80%]
+image::module-01/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=80%]
 
 *SAY:*
 
@@ -207,19 +207,19 @@ Let's start our migration.
 
 . You will be taken to a new screen where you will see that the plan for migration is being made ready.
 +
-image::module-05/NN_Await_Migration_Plan_Ready.png[link=self, window=blank, width=50%]
+image::module-01/NN_Await_Migration_Plan_Ready.png[link=self, window=blank, width=50%]
 +
 . After a few moments the plan will become *Ready*, click on the green "Play" button in the center of the window to start the migration process.
 +
-image::module-05/NN_Migration_Plan_Ready.png[link=self, window=blank, width=30%]
+image::module-01/NN_Migration_Plan_Ready.png[link=self, window=blank, width=30%]
 +
 . You will be presented with a confirmation box to begin the migration, click on the *Start* button.
 +
-image::module-05/NN_Start_Migration_Modal.png[link=self, window=blank, width=50%]
+image::module-01/NN_Start_Migration_Modal.png[link=self, window=blank, width=50%]
 +
 . A progress bar will appear in the center of the screen along with the status of *0 of 3 VMs migrated*.
 +
-image::module-05/NN_Migration_Plan_Running.png[link=self, window=blank, width=50%]
+image::module-01/NN_Migration_Plan_Running.png[link=self, window=blank, width=50%]
 
 *SAY:*
 
@@ -230,7 +230,7 @@ So let's click on the progress bar to see the status of our migration.
 
 . Click on the *0 of 3 VMs migrated* link and you will be presented with a page with more details about the migration process.
 +
-image::module-05/NN_VMs_Migrating_Details.png[link=self, window=blank, width=80%]
+image::module-01/NN_VMs_Migrating_Details.png[link=self, window=blank, width=80%]
 
 *SAY:*
 
@@ -249,7 +249,7 @@ Let's watch it for a moment before moving on.
 
 . You can click the drop-down arrow next to the name of each VM being migrated to get additional details about the stages of the migration process.
 +
-image::module-05/NN_VM_Migration_Stages.png[link=self, window=blank, width=60%]
+image::module-01/NN_VM_Migration_Stages.png[link=self, window=blank, width=60%]
 +
 . The migration process is quite long and expensive, so display the changes for a few moments, and then move on.
 
@@ -267,17 +267,17 @@ We've pre-migrated the three Windows VMs, so now let's start the Windows VMs, an
 
 . Start the VMs from the drop-down menus next to the VMs.
 +
-image::module-05/NN_Start_VMs.png[link=self, window=blank, width=100%]
+image::module-01/NN_Start_VMs.png[link=self, window=blank, width=100%]
 +
 . Locate on of the `winweb` machines that has started and click on its name to see the VM details page.
 +
-image::module-05/NN_VM_Name.png[link=self, window=blank, width=40%]
+image::module-01/NN_VM_Name.png[link=self, window=blank, width=40%]
 
 *SAY:*
 
 On this page we can see many details about the VMs that have been migrated to OpenShift Virtualization, especially the Windows desktop.
 
-image::module-05/NN_VM_Details.png[link=self, window=blank, width=100%]
+image::module-01/NN_VM_Details.png[link=self, window=blank, width=100%]
 
 == Summary
 
