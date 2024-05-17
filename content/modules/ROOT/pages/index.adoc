@@ -4,6 +4,8 @@
 
 *SAY:*
 
+OpenShift Virtualization includes a simple way to migrate your existing virtual machines from other hypervisors with the included Migration Toolkit for Virtualization.
+
 This demo highlights the migrating virtual machines from VMware vSphere to OpenShift.
 
 We will use us the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
