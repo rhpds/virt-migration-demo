@@ -1,0 +1,11 @@
+== OpenShift Virtualization Migration Demo
+
+A simple demo to show:
+
+* Basic VMware to OCP Virt migration
+* Uses Migration Tools for Virtualization
+* Use of Ansible Automation Platform to automate bulk migration
+
+== Authors
+
+Judd Maltin jmaltin@redhat.com
