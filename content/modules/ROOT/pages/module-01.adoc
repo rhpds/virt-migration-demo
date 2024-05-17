@@ -1,4 +1,4 @@
-= Migrating Virtual Machines
+= Migrating Virtual Machines Demo
 
 == Introduction
 
@@ -8,8 +8,8 @@ This demo highlights the migrating virtual machines from VMware vSphere to OpenS
 
 We will use us the Migration Toolkit for Virtualization to import virtual machines from VMware vSphere to OpenShift.
 
-A three-tier application has been deployed on VMware for us to migrate to OpenShift.
-It displays a visitor counter, and the hostname of the webserver that returned your request.
+// A three-tier application has been deployed on VMware for us to migrate to OpenShift.
+// It displays a visitor counter, and the hostname of the webserver that returned your request.
 
 ////
 Here's the application:
