@@ -97,27 +97,31 @@ Before we start, let's create an OpenShift Project to hold our VMs.
 
 . Navigate in the left menu to *Projects* and press *Create Project*.
 +
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Project[Create Project]
+link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Project[Link to Create Project Page]
 +
-image::module-05/10_Create_Project.png[link=self, window=blank, width=100%]
+image::module-05/NN_Create_Project.png[link=self, window=blank, width=100%]
 +
 . Name the project *vmexamples*.
 +
-. Click *Create Project*.
+image::module-05/NN_Create_Project_Modal.png[link=self, window=blank, width=30%]
 +
-image::module-05/11_Create_Project.png[link=self, window=blank, width=100%]
+. Click *Create*.
++
+. Set into the `openshift-mtv` namespace again to continue.
++
+image::module-05/NN_Select_openshift-mtv_Project.png[link=self, window=blank, width=40%]
 
 *SAY:*
 
 Ok, we're ready to create our migration plan.
 
-First, we'll create a plan to indicate the source provider, *VMware* and the VMs we want to migrate.
+First, we'll create a plan that indicates the source provider, *VMware* and the VMs we want to migrate.
 
 *DO:*
 
 . Navigate in the left menu to *Migration* -> *Plans for virtualization* and press *Create plan*.
 +
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan[Create Migration Plan]
+link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan[Link to Create Migration Plan]
 +
 image::module-05/14_Create_VMWARE_Plan.png[link=self, window=blank, width=100%]
 +
@@ -142,7 +146,7 @@ We have VMs that are already migrated, so we'll start them to access the applica
 
 . Click *Next*.
 +
-image::module-05/17_VM_Select_VMWARE_Plan.png[link=self, window=blank, width=100%]
+image::module-05/NN_Create_Migration_Plan_2.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
@@ -165,7 +169,7 @@ NOTE: Both the Network and Storage map will automatically detect the Network and
 +
 . Click *Create migration plan*.
 +
-image::module-05/18_Create_Migration_Plan.png[link=self, window=blank, width=100%]
+image::module-05/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
@@ -177,19 +181,19 @@ Let's start our migration.
 
 . You will be taken to a new screen where you will see that the plan for migration is being made ready.
 +
-image::module-05/19_Migration_Plan_Unready.png[link=self, window=blank, width=100%]
+image::module-05/NN_Await_Migration_Plan_Ready.png[link=self, window=blank, width=100%]
 +
 . After a few moments the plan will become *Ready*, click on the green "Play" button in the center of the window to start the migration process.
 +
-image::module-05/20_Migration_Plan_Ready.png[link=self, window=blank, width=100%]
+image::module-05/NN_Migration_Plan_Ready.png[link=self, window=blank, width=30%]
 +
 . You will be presented with a confirmation box to begin the migration, click on the *Start* button.
 +
-image::module-05/21_Confirm_Migrate_Start.png[link=self, window=blank, width=100%]
+image::module-05/NN_Start_Migration_Modal.png[link=self, window=blank, width=100%]
 +
-. A progress bar will appear in the center of the screen along with the status of *0 of 3 VMs migrated*.
+. A progress bar will appear in the center of the screen along with the status of *0 of 1 VMs migrated*.
 +
-image::module-05/22_VMs_Migrating.png[link=self, window=blank, width=100%]
+image::module-05/NN_Migration_Plan_Running.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
