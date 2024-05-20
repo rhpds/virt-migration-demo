@@ -214,7 +214,7 @@ image::module-01/NN_VM_Migration_Stages.png[link=self, window=blank, width=60%]
 +
 . The migration process is quite long and expensive, so display the changes for a few moments, and then move on.
 
-== Start the Windows VMs
+== Validate the Migrated Windows VMs and Application
 
 *SAY:*
 
@@ -239,6 +239,18 @@ image::module-01/NN_VM_Name.png[link=self, window=blank, width=40%]
 On this page we can see many details about the VMs that have been migrated to OpenShift Virtualization, especially the Windows desktop.
 
 image::module-01/NN_VM_Details.png[link=self, window=blank, width=100%]
+
+Now let's look at the application migrated and exposed to our organization.
+
+*DO:*
+
+. Click Networking in the left menu, and then click on *Routes*.
+
+. There should only be one route, `route-webapp`
+
+. Click the *Location* link and your browser will open with the web application, showing the visitor counter and the web server hostname.
+
+image::module-01/NN_VM_Networking_Routes.png[link=self, window=blank, width=100%]
 
 == Summary
 
