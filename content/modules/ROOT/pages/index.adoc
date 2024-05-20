@@ -10,11 +10,13 @@ This demo highlights the migration of virtual machines from VMware vSphere to Op
 
 We will use the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
 
+== Review the VMware Environment and Sample Application
 *SAY:*
 
 A three-tier application has been deployed on VMware for us to migrate to OpenShift.
 
-// It displays a visitor counter, and the hostname of the webserver that returned your request.
+The application is accessible from the following link: http://webapp.vc.opentlc.com/[WebApp^].
+It will display a visitor counter, and the hostname of the webserver that returned your request.
 
 This application consists of four virtual machines:
 
@@ -249,8 +251,12 @@ Now let's look at the application migrated and exposed to our organization.
 . There should only be one route, `route-webapp`
 
 . Click the *Location* link and your browser will open with the web application, showing the visitor counter and the web server hostname.
-
++
 image::module-01/NN_VM_Networking_Routes.png[link=self, window=blank, width=100%]
++
+. The application should look something like this
++
+image::module-01/NN_VM_Migrated_Application.png[link=self, window=blank, width=50%]
 
 == Summary
 
