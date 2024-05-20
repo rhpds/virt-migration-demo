@@ -87,7 +87,7 @@ Let's have a look at them now.
 
 . Open the following link to open the list of OpenShift Virtualization console and see the list of providers.
 +
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Provider[Provider List Screen]
+link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io%7Ev1beta1~Provider[Provider List Screen^]
 +
 image::module-01/NN_Virtualization_Console_Login.png[link=self, window=blank, width=30%]
 +
@@ -148,7 +148,7 @@ First, we'll create a plan that indicates the source provider, *VMware* and the 
 
 . Navigate in the left menu to *Migration* -> *Plans for virtualization* and press *Create plan*.
 +
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan[Link to Create Migration Plan]
+link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io%7Ev1beta1~Plan[Link to Create Migration Plan^]
 +
 image::module-01/NN_Create_VMware_Plan.png[link=self, window=blank, width=100%]
 +
