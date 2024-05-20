@@ -162,7 +162,11 @@ image::module-01/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=8
 
 *SAY:*
 
-Now we wait a moment for our Migration Plan to be analysed by the system and ready to start the migration...
+Now we wait a moment for our Migration Plan to be analysed by the system and ready to start the migration.
+
+NOTE: Sometimes it takes a few minutes to create the plan.
+You can scroll down to the bottom of the page to show the *Conditions* and progress of plan preparation.
+You can also click through the tab bar on the top to show details about the required *Resources* for the migration have been computed.
 
 Let's start our migration!
 
@@ -215,6 +219,13 @@ Let's watch it for a moment before moving on.
 image::module-01/NN_VM_Migration_Stages.png[link=self, window=blank, width=60%]
 +
 . The migration process is quite long and expensive, so display the changes for a few moments, and then move on.
+
+. You can also show the logs of the migration process by clicking in *Plan Details* the tab *Virtual Machines*.
+From there you can see the logs of each VM being migrated.
++
+image::module-01/NN_VM_Migration_Logs.png[link=self, window=blank, width=60%]
++
+image::module-01/NN_VM_Migration_Logs_View.png[link=self, window=blank, width=60%]
 
 == Validate the Migrated Windows VMs and Application
 
