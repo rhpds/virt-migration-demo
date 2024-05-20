@@ -10,17 +10,6 @@ This demo highlights the migration of virtual machines from VMware vSphere to Op
 
 We will use the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
 
-////
-Here's the application:
-
-*DO:*
-
-Open the link:
-http://webapp.vc.opentlc.com/[WebApp^]
-////
-
-== Identify the Virtual Machines on vCenter
-
 *SAY:*
 
 A three-tier application has been deployed on VMware for us to migrate to OpenShift.
@@ -104,7 +93,7 @@ image::module-01/NN_Migration_Providers.png[link=self, window=blank, width=80%]
 
 Our list of providers contains two providers: *Host* and *VMware*.
 
-VMware will be the source provider, and Host is of type OpenShift, and it will be the target provider.
+VMware will be the source provider, and Host is of type OpenShift, which will be the target provider.
 
 === Create a Migration Plan
 
@@ -112,35 +101,7 @@ VMware will be the source provider, and Host is of type OpenShift, and it will b
 
 Now that we have reviewed our environment, it is time for us to create a Migration Plan.
 
-The Migration plan selects which VMs to migrate from VMware vSphere to Red Hat OpenShift Virtualization and specifics about how to execute the migration.
-
-////
-// This sections creates a destinaion namespace for the VMs.  OMIT
-
-Before we start, let's create an OpenShift Project to hold our VMs.
-
-*DO:*
-
-. Navigate in the left menu to *Projects* and press *Create Project*.
-+
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Project[Link to Create Project Page]
-+
-image::module-01/NN_Create_Project.png[link=self, window=blank, width=100%]
-+
-. Name the project *vmexamples*.
-+
-image::module-01/NN_Create_Project_Modal.png[link=self, window=blank, width=30%]
-+
-. Click *Create*.
-+
-. Set into the `openshift-mtv` namespace again to continue.
-+
-image::module-01/NN_Select_openshift-mtv_Project.png[link=self, window=blank, width=40%]
-////
-
-*SAY:*
-
-Ok, we're ready to create our migration plan.
+The Migration Plan selects which VMs to migrate from VMware vSphere to Red Hat OpenShift Virtualization and specifies how to execute the migration.
 
 First, we'll create a plan that indicates the source provider, *VMware* and the VMs we want to migrate.
 
@@ -169,8 +130,7 @@ Next, we'll select the VMs that we want to migrate.
 * `winweb01`
 * `winweb02`
 
-WARNING: The VMs are far too large to migrate in this short demo.
-We have VMs that are already migrated to show.
+WARNING: The VMs are far too large to migrate in this short demo. We have VMs that are already migrated to show.
 
 . Click *Next*.
 +
@@ -180,7 +140,7 @@ image::module-01/NN_Create_Migration_Plan_2.png[link=self, window=blank, width=8
 
 On this screen we provide details for of the migration plan.
 
-We will give our plan a name, and make sure we're using the proper Network maps and Storage maps.
+We will give our plan a name, and make sure we're using the proper network maps and storage maps.
 
 *DO:*
 
@@ -192,8 +152,7 @@ Please fill in your migration plan with the following values:
 * Network map: *Pod Networking*
 * Storage map: *ocs-storagecluster-ceph-rbd-virtualization*
 +
-NOTE: Both the Network and Storage map will automatically detect the Network and Datastore that the discovered virtual machines currently make use of on the source provider.
-You will just need to make sure that their respective values are set correctly on the OpenShift side.
+NOTE: Storage and network mappings should be automatically detected from the discovered virtual machines, but make sure to double-check that the correct values are set as described in this guide.
 +
 . Click *Create migration plan*.
 +
@@ -201,9 +160,9 @@ image::module-01/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=8
 
 *SAY:*
 
-Now we wait a moment for our Migration Plan to be analysed by the system and ready to start the migration.
+Now we wait a moment for our Migration Plan to be analysed by the system and ready to start the migration...
 
-Let's start our migration.
+Let's start our migration!
 
 *DO:*
 
@@ -259,19 +218,19 @@ image::module-01/NN_VM_Migration_Stages.png[link=self, window=blank, width=60%]
 
 *SAY:*
 
-We've pre-migrated the three Windows VMs, so now let's start the Windows VMs, and have a look at their desktops.
+We've pre-migrated all three VMs. Let's start one of the Windows VMs and connect to it to have a look.
 
 *DO:*
 
 . Click on *Virtualization* in the left menu, and then on *Virtual Machines*.
 
-. Make sure you're in the Project: `vmimported`.
+. Go to the Project: `vmimported`.
 
-. Start the VMs from the drop-down menus next to the VMs.
+. Start the `winweb01` VM from the drop-down menus next to the VM name.
 +
 image::module-01/NN_Start_VMs.png[link=self, window=blank, width=100%]
 +
-. Locate on of the `winweb` machines that has started and click on its name to see the VM details page.
+. Click on the `winweb01` VM that has started and click on its name to see the VM details page.
 +
 image::module-01/NN_VM_Name.png[link=self, window=blank, width=40%]
 
@@ -285,10 +244,11 @@ image::module-01/NN_VM_Details.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
-In this demo we used the Migration Toolkit for Virtualization to assist with the migration of existing virtual machines from a VMware vSphere environment to OpenShift Virtualization.
+In this demo, we used the Migration Toolkit for Virtualization to assist with the migration of existing virtual machines from a VMware vSphere environment to OpenShift Virtualization.
 
 In addition to the Migration Toolkit for Virtualization, there are three other migration toolkits.
-The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization's needs.
+
+The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization’s needs.
 
 For more information about these other migration toolkits, please reach out to your Red Hat account team.
 
