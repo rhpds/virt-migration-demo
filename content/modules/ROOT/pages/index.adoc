@@ -22,14 +22,14 @@ A three-tier application has been deployed on VMware for us to migrate to OpenSh
 The application is accessible from the following link: http://webapp.vc.opentlc.com/[WebApp^].
 It will display a visitor counter, and the hostname of the webserver that returned your request.
 
-This application consists of four virtual machines:
+This simple application consists of four virtual machines:
 
 * One HAproxy system that redirects traffic to the web servers.
 * One Linux system running a MariaDB database.
 * Two Microsoft Windows servers with IIS hosting a PHP application connecting to the database.
 
-One benefit of migrating to OpenShift is that you can dispose of the HAproxy VM, simplifying your migration process.
-You do not need to migrate the HAproxy VM (which acts as a load balancer) because OpenShift already handles network traffic and load balancing natively, if desired.
+NOTE: One benefit of migrating to OpenShift is that, if you have a simple loadbalancer configuration, you do not need to migrate the HAproxy VM (which acts as a load balancer).
+OpenShift already handles network traffic and load balancing natively, if desired.
 
 Now, we will navigate to the VMware vCenter and take note of the names of the virtual machines we want to migrate.
 
@@ -127,6 +127,10 @@ image::module-01/NN_VMware_Source_Provider.png[link=self, window=blank, width=50
 *SAY:*
 
 Next, we'll select the VMs that we want to migrate.
+
+CAUTION: As an aside: The VMs are auto-discovered by Migration Toolkit for Virtualization, and are organized into "Concerns."
+Concerns are an advanced feature,  part of the Validation service that uses policy rules to check the suitability of each virtual machine (VM) for migration.
+The Validation service generates a list of concerns for each VM, which are stored in the Provider Inventory service as VM attributes. The web console displays the concerns for each VM in the provider inventory.
 
 *DO:*
 
