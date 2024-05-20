@@ -1,5 +1,9 @@
 = Migrating Virtual Machines Demo
 
+NOTE: This demo is geared for VMware administrators.
+With this in mind, please use a minimum of OpenShift and Kubernetes terminology.
+For example, avoid the use of the term *Pod*, as it can be confusing to VMware administrators unfamiliar with OpenShift.
+
 == Introduction
 
 *SAY:*
