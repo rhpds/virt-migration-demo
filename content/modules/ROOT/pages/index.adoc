@@ -4,14 +4,11 @@
 
 *SAY:*
 
-OpenShift Virtualization includes a simple way to migrate your existing virtual machines from other hypervisors with the included Migration Toolkit for Virtualization.
+OpenShift Virtualization includes a simple way to migrate your existing virtual machines from other hypervisors with the included Migration Toolkit for Virtualization (MTV).
 
-This demo highlights the migrating virtual machines from VMware vSphere to OpenShift.
+This demo highlights the migration of virtual machines from VMware vSphere to OpenShift.
 
-We will use us the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
-
-// A three-tier application has been deployed on VMware for us to migrate to OpenShift.
-// It displays a visitor counter, and the hostname of the webserver that returned your request.
+We will use the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
 
 ////
 Here's the application:
@@ -26,16 +23,20 @@ http://webapp.vc.opentlc.com/[WebApp^]
 
 *SAY:*
 
-This application consisting four virtual machines:
+A three-tier application has been deployed on VMware for us to migrate to OpenShift.
 
-* One HAproxy system that redirects traffic to the web servers
-* One Linux system running a MariaDB database
-* Two Microsoft Windows servers with IIS hosting a PHP application connecting to the database
+// It displays a visitor counter, and the hostname of the webserver that returned your request.
 
-One benefit of OpenShift virtualization is that you can dispose of the HAproxy VM, simplifying your migration process.
-You do not need to migrate the HAproxy (load balancer) VM because OpenShift already handles network traffic and load balancing natively for VMs, if desired.
+This application consists of four virtual machines:
 
-We will navigate to the VMware vCenter and take note of the names of the virtual machines we want to migrate.
+* One HAproxy system that redirects traffic to the web servers.
+* One Linux system running a MariaDB database.
+* Two Microsoft Windows servers with IIS hosting a PHP application connecting to the database.
+
+One benefit of migrating to OpenShift is that you can dispose of the HAproxy VM, simplifying your migration process.
+You do not need to migrate the HAproxy VM (which acts as a load balancer) because OpenShift already handles network traffic and load balancing natively, if desired.
+
+Now, we will navigate to the VMware vCenter and take note of the names of the virtual machines we want to migrate.
 
 * `database`
 * `winweb01`
@@ -54,15 +55,15 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
-. By default you'll land in the *Inventory* view at the top of the navigation tree.
-Click the *Workloads* icon and expand the navigation tree until you see the folder that matches your username, and the 4 VMs under it.
+. By default, you’ll land in the *Inventory* view at the top of the navigation tree.
+Click the *Workloads* icon and expand the navigation tree until you see the folder that matches your username and the four VMs under it.
 Click the *VMs* tab at the top of the screen to view the VM details.
 +
 image::module-01/00_Workload_VM_List.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
-Let's look at one of the virtual machines, and validate that it is a Windows Operating System.
+For the purposes of this demo, we have *Windows* and *CentOS* VMs to migrate. Check the operating system details by looking at the virtual machines.
 
 *DO:*
 
@@ -74,11 +75,11 @@ image::module-01/NN_vSphere_VM_Details.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
-Let's now look at how we're going to migrate the virtual machines.
+Let’s now look at how we’re going to migrate the virtual machines.
 
 The Migration Toolkit for Virtualization has *Providers* that support various virtualization platforms.
 
-We'll be using the VMware Provider as our migration source, and the Host Provider as our migration target.
+We’ll be using the VMware Provider as our migration source and the Host Provider as our migration target.
 
 Let's have a look at them now.
 
