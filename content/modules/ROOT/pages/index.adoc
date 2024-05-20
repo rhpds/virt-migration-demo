@@ -241,6 +241,10 @@ image::module-01/NN_VM_Migration_Logs_View.png[link=self, window=blank, width=60
 
 We've pre-migrated all three VMs. Let's start one of the Windows VMs and connect to it to have a look.
 
+OpenShift separates work into different projects, and each project can have its own set of virtual machines.
+
+Let's change to the project that contains our pre-migrated VMs.
+
 *DO:*
 
 . Click on *Virtualization* in the left menu, and then on *Virtual Machines*.
