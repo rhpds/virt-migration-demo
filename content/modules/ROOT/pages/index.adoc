@@ -7,7 +7,7 @@ For example, avoid the use of the term *Pod*, as it can be confusing to VMware a
 == Setting Up Your Environment
 
 Prior to your demo, prepare your demo environment by simply logging into both the vCenter and OpenShift Console.
-This limits limit the steps you need to take to completethe demonstration and fumbling around with copy-paste.
+This limits the steps you need to take to complete the demonstration and reduces the likelihood of fumbling around with copy-paste with passwords.
 
 *DO:*
 
@@ -74,7 +74,8 @@ image::module-01/00_Workload_VM_List.png[link=self, window=blank, width=100%]
 
 *SAY:*
 
-For the purposes of this demo, we have *Windows* and *CentOS* VMs to migrate. Check the operating system details by looking at the virtual machines.
+For the purposes of this demo, we have *Windows* and *CentOS* VMs to migrate.
+Check the operating system details by looking at the virtual machines.
 
 *DO:*
 
@@ -96,8 +97,7 @@ Let's have a look at them now.
 
 *DO:*
 
-. You will be taken directly to the list of migration providers.
-Or you can click *Migration* -> *Providers* for virtualization
+. Navigate to the link:{openshift_web_console}[OpenShift Console^] and click *Migration* -> *Providers for virtualization*
 
 image::module-01/NN_Migration_Providers.png[link=self, window=blank, width=80%]
 
@@ -146,7 +146,8 @@ The Validation service generates a list of concerns for each VM, which are store
 * `winweb01`
 * `winweb02`
 
-WARNING: The VMs are far too large to migrate in this short demo. We have VMs that are already migrated to show.
+WARNING: The VMs are far too large to migrate in this short demo.
+But that's OK, we have VMs that are already migrated to show after we've kicked off this migration process.
 
 . Click *Next*.
 +
@@ -278,7 +279,11 @@ image::module-01/NN_VM_Details.png[link=self, window=blank, width=100%]
 
 NOTE: You don't need to login, but if you wanted to, the password is `R3dh4t1!`
 
-Now let's look at the application migrated and exposed to our organization.
+What are applications good for if you can't connect to them?
+
+So let's look at the application migrated and exposed to our organization.
+
+For that, the we already create a "route", you can think of that like a DNS name or a loadbalancer...
 
 *DO:*
 
@@ -292,13 +297,7 @@ image::module-01/NN_VM_Networking_Routes.png[link=self, window=blank, width=100%
 +
 . The application should look something like this
 +
-image::module-01/NN_VM_Migrated_Application.png[link=self, window=blank, width=50%]
-
-*SAY:*
-
-What are applications good for if you can't connect to them?
-
-For that, the we create a "route", you can think of that like a DNS name or a loadbalancer...
+image::module-01/NN_VM_Migrated_Application.png[link=self, window=blank, width=70%]
 
 == Summary
 
