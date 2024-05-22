@@ -26,6 +26,7 @@ In this section you'll find all access information for the environment used in t
 ** *Admin Password:* {openshift_admin_password}
 
 == Review the VMware Environment and Sample Application
+
 *SAY:*
 
 A three-tier application has been deployed on VMware for us to migrate to OpenShift.
@@ -91,17 +92,19 @@ Let's have a look at them now.
 
 *DO:*
 
-. Open the following link to open the list of OpenShift Virtualization console and see the list of providers.
-+
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io%7Ev1beta1~Provider[Provider List Screen^]
+. Login as an Administrator to OpenShift Web Console: https://{openshift_web_console}[OpenShift Web Console^]
+
+* *Username:* {openshift_admin_user}
+* *Password:* {openshift_admin_password}  
+
 +
 image::module-01/NN_Virtualization_Console_Login.png[link=self, window=blank, width=30%]
 +
-. Administrator login is available with:
 
-* *Username:* {openshift_admin_user}
-* *Password:* {openshift_admin_password}
-+
+. Navigate to *Migration* and *Providers for Virtualization* in the left menu.
+
+. Alternatively, open the following link to go directly to see the list of providers: link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io%7Ev1beta1~Provider[Provider List Screen^]
+
 . You will be taken directly to the list of migration providers.
 
 image::module-01/NN_Migration_Providers.png[link=self, window=blank, width=80%]
