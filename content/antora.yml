@@ -7,12 +7,12 @@ nav:
 
 asciidoc:
   attributes:
-    openshift_admin_password: TEST
-    openshift_admin_user: TEST
-    openshift_web_console: TEST
-    vcenter_console: TEST
-    vcenter_password: TEST
-    vcenter_user: TEST
+    openshift_admin_password: openshift_admin_password
+    openshift_admin_user: openshift_admin_user
+    openshift_web_console: https://console-openshift-console.apps.GUID.dynamic.redhatworkshops.io
+    vcenter_console: vcenter_console
+    vcenter_password: vcenter_password
+    vcenter_user: vcenter_user
     lab_name: "I'm the lab_name var"
     release-version: master
     page-pagination: true

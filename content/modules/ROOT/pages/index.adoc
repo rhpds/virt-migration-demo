@@ -14,6 +14,17 @@ This demo highlights the migration of virtual machines from VMware vSphere to Op
 
 We will use the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
 
+== Environment Setup
+
+In this section you'll find all access information for the environment used in this demo.
+
+* *VMware vCenter:* https://{vcenter_console}
+** *vCenter User:* {vcenter_user}
+** *vCenter Password:* {vcenter_password}
+* *OpenShift Web Console:* {openshift_web_console}
+** *Admin User:* {openshift_admin_user}
+** *Admin Password:* {openshift_admin_password}
+
 == Review the VMware Environment and Sample Application
 *SAY:*
 
