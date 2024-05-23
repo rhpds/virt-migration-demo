@@ -22,7 +22,7 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
-. Navigate to the https://{openshift_console}[OpenShift Console^]
+. Navigate to the https://{openshift_web_console}[OpenShift Console^]
 +
 . Login as administrator:
 * *Username:* {openshift_admin_user}
