@@ -2,23 +2,23 @@
 
 *SAY:*
 
-OpenShift Virtualization includes a simple way to migrate your existing virtual machines from other hypervisors with the included Migration Toolkit for Virtualization (MTV).
+In the previous module, you saw how easy it is to migrate VMs from VMware to OpenShift Virtualization using the Migration Toolkit for Virtualization.
 
-This demo highlights the migration of virtual machines from VMware vSphere to OpenShift.
+While this process is effective and doesn’t take too long to complete, how can we speed up the process and achieve scale when needed?
 
-We will use the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
+Here, we introduce Ansible Automation Platform (AAP) to the mix.
+
+== Ansible Automation Platform
+
+Lopsum ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac nunc ultricies tincidunt. Nullam nec purus ac nunc ultricies tincidunt. Nullam nec purus ac nunc ultricies tincidunt. Nullam nec purus ac nunc ultricies tincidunt.
 
 == Summary
 
 *SAY:*
 
-In this demo, we used the Migration Toolkit for Virtualization to assist with the migration of existing virtual machines from a VMware vSphere environment to OpenShift Virtualization.
+In this demo, we used the Ansible Automation Platform to migrate our VMs to OpenShift Virtualization, bringing automation to the process and all the benefits that come with it: speed, scale, and consistency.
 
-In addition to the Migration Toolkit for Virtualization, there are three other migration toolkits.
-
-The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization’s needs.
-
-For more information about these other migration toolkits, please reach out to your Red Hat account team.
+Furthermore, we can now easily integrate this process with other automation workflows and automate the lifecycle of your virtual machines. While Day 2 and Day 3 operations are not covered in this demo, there are separate resources available to assist you with those.
 
 *DO:*
 

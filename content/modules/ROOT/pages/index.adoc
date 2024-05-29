@@ -5,7 +5,12 @@ This demo is geared for VMware administrators.
 With this in mind, please use a minimum of OpenShift and Kubernetes terminology.
 For example, avoid the use of the term *Pod*, as it can be confusing to VMware administrators unfamiliar with OpenShift.
 
+**This demo is divided into two parts:**
 
+1. xref:01-mtv-migration.adoc[VM Migration with the Migration Toolkit for Virtualization]
+2. xref:02-ansible-migration.adoc[VM Migration with the Ansible Automation Platform]
+
+Feel free to deliver both parts or choose the one that best fits your audience.
 
 == Setting Up Your Environment
 
