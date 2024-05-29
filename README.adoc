@@ -9,3 +9,4 @@ A simple demo to show:
 == Authors
 
 Judd Maltin jmaltin@redhat.com
+Juliano Mohr juliano@redhat.com

@@ -1,1 +1,3 @@
-* xref:index.adoc[Demo Guide]
+* xref:index.adoc[1. Introduction]
+* xref:01-mtv-migration.adoc[2. MTV Migration]
+* xref:02-ansible-migration.adoc[3. Ansible Migration]

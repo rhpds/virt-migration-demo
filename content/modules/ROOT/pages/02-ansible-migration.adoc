@@ -1,0 +1,25 @@
+= VM Migration with the Ansible Automation Platform
+
+*SAY:*
+
+OpenShift Virtualization includes a simple way to migrate your existing virtual machines from other hypervisors with the included Migration Toolkit for Virtualization (MTV).
+
+This demo highlights the migration of virtual machines from VMware vSphere to OpenShift.
+
+We will use the Migration Toolkit for Virtualization to migrate virtual machines from VMware vSphere to OpenShift Virtualization.
+
+== Summary
+
+*SAY:*
+
+In this demo, we used the Migration Toolkit for Virtualization to assist with the migration of existing virtual machines from a VMware vSphere environment to OpenShift Virtualization.
+
+In addition to the Migration Toolkit for Virtualization, there are three other migration toolkits.
+
+The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization’s needs.
+
+For more information about these other migration toolkits, please reach out to your Red Hat account team.
+
+*DO:*
+
+NOTE: Please delete this demo from the Red Hat Demo Platform as soon as you have completed practicing or delivering the demo to your customer.
