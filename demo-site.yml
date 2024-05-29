@@ -1,6 +1,6 @@
 ---
 site:
-  title: "Red Hat OpenShift Virtualization Migration Demo"
+  title: ""
   # url: https://redhat-scholars.github.io/course-template
   start_page: modules::index.adoc
 

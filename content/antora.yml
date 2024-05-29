@@ -1,6 +1,6 @@
 ---
 name: modules
-title: OpenShift Virtualization Migration
+title: OpenShift Virtualization Migration Demo
 version: master
 nav:
   - modules/ROOT/nav.adoc
@@ -9,11 +9,14 @@ asciidoc:
   attributes:
     openshift_admin_password: openshift_admin_password
     openshift_admin_user: openshift_admin_user
-    openshift_web_console: https://console-openshift-console.apps.GUID.dynamic.redhatworkshops.io
+    openshift_web_console: openshift_web_console
     vcenter_console: vcenter_console
     vcenter_password: vcenter_password
     vcenter_user: vcenter_user
-    lab_name: "I'm the lab_name var"
+    aap_controller_web_url: aap_controller_web_url
+    aap_controller_admin_user: aap_controller_admin_user
+    aap_controller_admin_password: aap_controller_admin_password
+    lab_name: "OpenShift Virtualization Migration Demo"
     release-version: master
     page-pagination: true
     my_var: "foo"
