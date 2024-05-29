@@ -10,7 +10,37 @@ Here, we introduce Ansible Automation Platform (AAP) to the mix.
 
 == Ansible Automation Platform
 
-Lopsum ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec purus ac nunc ultricies tincidunt. Nullam nec purus ac nunc ultricies tincidunt. Nullam nec purus ac nunc ultricies tincidunt. Nullam nec purus ac nunc ultricies tincidunt.
+Let me show you how easy it is to migrate from VMware to OpenShift Virtualization with ansible automation platform.
+
+Here we have an architectural diagram showcasing each phrase from day Zero to day two of the VM life cycle.
+
+The focus today is on day one and how we can leverage the abilities of the Migration Toolkit for Virtualization and Ansible Automation Platform to simplify this process and automate the migration.
+
+To start the migration first we need to determine what VMS we wish to migrate.
+
+Within the vSphere client UI I've identified those as win web01 and win web 02.
+
+The next thing I need to do is within the OpenShift web UI, I need to set up the prerequisites to have a successful migration.
+
+This includes the provider, the virtual plan, and setting up the network and storage maps.
+
+This is what that process looks like manually.  (Fast Forward)
+
+While this process is effective and took us just over 2 and 1 half minutes to complete, how can we speed up this process and that scale when needed to do that we introduce Ansible Automation Platform to the mix?
+
+With our job template already in place that handles all the prerequisites all we need to do is answer a few simple questions in our fully customizable anable survey, Such as the names of the VMS to migrate and we are often running.
+
+This time we can see the process just takes us a little less than 26 seconds to complete.
+
+We can now take a look at the migration Job template itself and see it's running and setting up everything for us such as the provider creation the network and storage maps and even the virtual plan itself.
+
+Now within the OpenShift UI you can see everything has been pre-created for us because of ansible automation platform.
+
+This includes the virtual machines wi web01 and wi web 02 and their corresponding IDs that are built into the virtual plan when we filled out the anable survey.
+
+When you're ready it's just a matter of initiating the migration process itself or if you prefer this process can be automated as well.
+
+With AAP you have total control of how and what you want to automate not to mention the increased speed in reducing the number of manual steps taking away the human error element by automating your workflows and having consistency as you scale out your migration process.
 
 == Summary
 
