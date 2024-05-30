@@ -10,25 +10,56 @@ Here, we introduce Ansible Automation Platform (AAP) to the mix.
 
 == Ansible Automation Platform
 
-Let me show you how easy it is to migrate from VMware to OpenShift Virtualization with ansible automation platform.
+Let me show you how easy it is to migrate from VMware to OpenShift Virtualization with Ansible Automation Platform.
+
+image::module-02/mtv_ansible_architecture_01.png[]
 
 Here we have an architectural diagram showcasing each phrase from day Zero to day two of the VM life cycle.
 
 The focus today is on day one and how we can leverage the abilities of the Migration Toolkit for Virtualization and Ansible Automation Platform to simplify this process and automate the migration.
 
-To start the migration first we need to determine what VMS we wish to migrate.
+// To start the migration first we need to determine what VMS we wish to migrate.
 
-Within the vSphere client UI I've identified those as win web01 and win web 02.
+// Within the vSphere client UI I've identified those as win web01 and win web 02.
 
-The next thing I need to do is within the OpenShift web UI, I need to set up the prerequisites to have a successful migration.
+// The next thing I need to do is within the OpenShift web UI, I need to set up the prerequisites to have a successful migration.
 
-This includes the provider, the virtual plan, and setting up the network and storage maps.
+// This includes the provider, the virtual plan, and setting up the network and storage maps.
 
-This is what that process looks like manually.  (Fast Forward)
+// This is what that process looks like manually.  (Fast Forward)
 
-While this process is effective and took us just over 2 and 1 half minutes to complete, how can we speed up this process and that scale when needed to do that we introduce Ansible Automation Platform to the mix?
+The manual process is effective and took us just a few minutes to prepare, how can we speed up this process and that scale when needed to do that we introduce Ansible Automation Platform to the mix?
 
-With our job template already in place that handles all the prerequisites all we need to do is answer a few simple questions in our fully customizable anable survey, Such as the names of the VMS to migrate and we are often running.
+*DO:*
+
+. Navigate to the https://{aap_controller_web_url}[AAP Controller^]
+.. Log in if necessary:
+====
+* *Username:* {aap_controller_admin_user}
+* *Password:* {aap_controller_admin_password}
+====
+
+. Click on *Templates* in the left menu, and then click on *01 Migrate VMware VMs to OpenShift Virtualization*.
+
+. Click *Launch*.
+
+*SAY:*
+With our job template already in place that handles all the prerequisites all we need to do is answer a few simple questions in our fully customizable anable survey, such as the names of the VMS to migrate and we are often running.
+
+*DO:*
+
+. Enter the names of the three VMs you would like to migrate into the Ansible survey.
++
+----
+winweb01
+winweb02
+----
+
+. Click *Next* to continue.
+
+. Click *Launch* to start the migration process.
+
+*SAY:*
 
 This time we can see the process just takes us a little less than 26 seconds to complete.
 
