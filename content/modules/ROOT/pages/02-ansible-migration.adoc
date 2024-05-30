@@ -65,11 +65,49 @@ This time we can see the process just takes us a little less than 26 seconds to 
 
 We can now take a look at the migration Job template itself and see it's running and setting up everything for us such as the provider creation the network and storage maps and even the virtual plan itself.
 
-Now within the OpenShift UI you can see everything has been pre-created for us because of ansible automation platform.
+*DO:*
 
-This includes the virtual machines wi web01 and wi web 02 and their corresponding IDs that are built into the virtual plan when we filled out the anable survey.
+. Click on *Jobs* on the left menu, and then click on the most recent run of *01 Migrate VMware VMs to OpenShift Virtualization*.
+
+. Navigate to the https://{openshift_web_console}[OpenShift Console^]
+
+. Select the appropriate *Project* that's the target of the migration.
+
+. Click *Migration* in the left menu, and then click *Providers for Virtualization*.
+
+*SAY:*
+
+Now within the OpenShift UI you can see everything has been pre-created for us because of Ansible Automation Platform.
+
+*DO:*
+
+Click on *Plans for Virtualization* on the left menu, and show how the migration plan has been created.
+
+*SAY:*
+
+This includes the virtual machines winweb01 and winweb02 and their corresponding IDs that are built into the virtual plan when we filled out the Ansible survey.
+
+*DO:*
+
+. Click on the *Plans for virtualization* on the left menu, and indicate the new plan created by AAP.
+
+. Click on the *NetworkMaps for virtualization* on the left menu, and indicate the new network map created by AAP.
+
+. Click on the *StorageMaps for virtualization* on the left menu, and indicate the new storage map created by AAP.
+
+. Return to the *Plans for virtualization* on the left menu, and click on the name of the `migration-plan`.
+
+. Click on the *YAML* tab, and highlight the names of the virtual machines to be migrated, on or about lines 65 through 90 in the YAML.
+
+*SAY:*
 
 When you're ready it's just a matter of initiating the migration process itself or if you prefer this process can be automated as well.
+
+*DO:*
+
+. Again click on *Plans for virtualization* on the left menu, and click the *Start* button on the right, and cofirm by clicking *Start* in the modal box that opens.
+
+*SAY:*
 
 With AAP you have total control of how and what you want to automate not to mention the increased speed in reducing the number of manual steps taking away the human error element by automating your workflows and having consistency as you scale out your migration process.
 
