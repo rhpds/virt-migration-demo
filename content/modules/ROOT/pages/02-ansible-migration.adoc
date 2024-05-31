@@ -58,10 +58,15 @@ winweb02
 . Click *Next* to continue.
 
 . Click *Launch* to start the migration process.
++
+TIP: The display might not refresh automatically.
+Refresh your browser to see the Ansible Job Output.
 
 *SAY:*
 
-This time we can see the process just takes us a little less than 26 seconds to complete.
+This time we can see the process just takes us a little less than 30 seconds to complete.
+
+image:module-02/migration_job_elapsed_time.png[]
 
 We can now take a look at the migration Job template itself and see it's running and setting up everything for us such as the provider creation the network and storage maps and even the virtual plan itself.
 
@@ -71,9 +76,11 @@ We can now take a look at the migration Job template itself and see it's running
 
 . Navigate to the link:{openshift_web_console}[OpenShift Console^]
 
-. Select the appropriate *Project* that's the target of the migration.
+//. Select the appropriate *Project* that's the target of the migration.
 
 . Click *Migration* in the left menu, and then click *Providers for Virtualization*.
+
+image:module-02/ansible_migration_plan.png[]
 
 *SAY:*
 
@@ -81,7 +88,7 @@ Now within the OpenShift UI you can see everything has been pre-created for us b
 
 *DO:*
 
-Click on *Plans for Virtualization* on the left menu, and show how the migration plan has been created.
+Click on *Plans for Virtualization* on the left menu, and show how another migration plan has been created.
 
 *SAY:*
 
@@ -101,11 +108,14 @@ This includes the virtual machines winweb01 and winweb02 and their corresponding
 
 *SAY:*
 
-When you're ready it's just a matter of initiating the migration process itself or if you prefer this process can be automated as well.
+The VM migration plan has already been Started for you.
+If you prefer, the Ansible Automation can simply set up these resources and rely on you to click the *Start* button.
 
+////
 *DO:*
 
 . Again click on *Plans for virtualization* on the left menu, and click the *Start* button on the right, and cofirm by clicking *Start* in the modal box that opens.
+////
 
 *SAY:*
 
