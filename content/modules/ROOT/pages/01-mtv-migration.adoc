@@ -102,9 +102,10 @@ image::module-01/NN_VMware_Source_Provider.png[link=self, window=blank, width=50
 
 Next, we'll select the VMs that we want to migrate.
 
-CAUTION: As an aside: The VMs are auto-discovered by Migration Toolkit for Virtualization, and are organized into "Concerns."
-Concerns are an advanced feature,  part of the Validation service that uses policy rules to check the suitability of each virtual machine (VM) for migration.
-The Validation service generates a list of concerns for each VM, which are stored in the Provider Inventory service as VM attributes. The web console displays the concerns for each VM in the provider inventory.
+TIP: As an aside: The VMs are auto-discovered by Migration Toolkit for Virtualization, and are organized into "Concerns."
+Concerns are an advanced feature, which is part of the Validation service that uses policy rules to check the suitability of each virtual machine (VM) for migration.
+The Validation service generates a list of *concerns* for each VM, which are stored in the Provider Inventory service as VM attributes.
+The web console displays the concerns for each VM in the provider inventory.
 
 *DO:*
 
@@ -137,9 +138,9 @@ Please fill in your migration plan with the following values:
 * Network map: *Pod Networking*
 * Storage map: *ocs-storagecluster-ceph-rbd-virtualization*
 +
-NOTE: Storage and network mappings should be automatically detected from the discovered virtual machines, but make sure to double-check that the correct values are set as described in this guide.
+CAUTION: The Storage Map name is very similar to the default.
 +
-WARNING: The Storage Map name is very similar to the default.
+NOTE: Storage and network mappings should be automatically detected from the discovered virtual machines, but make sure to double-check that the correct values are set as described in this guide.
 Make sure to change it to *ocs-storagecluster-ceph-rbd-virtualization*.
 +
 . Click *Create migration plan*.
@@ -150,7 +151,7 @@ image::module-01/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=8
 
 Now we wait a moment for our Migration Plan to be analysed by the system and ready to start the migration.
 
-NOTE: Sometimes it takes a few minutes to create the plan.
+TIP: Sometimes it takes a few minutes to create the plan.
 You can scroll down to the bottom of the page to show the *Conditions* and progress of plan preparation.
 You can also click through the tab bar on the top to show details about the required *Resources* for the migration have been computed.
 
@@ -231,7 +232,7 @@ First we need to change to the project that contains our pre-migrated VMs.
 
 . Go to the Project: `vmimported`.
 
-. Start the `winweb01` VM from the drop-down menus next to the VM name.
+. Start the `database` and `winweb01` VM from the drop-down menus next to the VMs names.
 +
 image::module-01/NN_Start_VMs.png[link=self, window=blank, width=100%]
 +
