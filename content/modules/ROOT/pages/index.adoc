@@ -1,3 +1,4 @@
+:openshift_web_console: https://console-openshift-console.apps.nl222.dynamic.redhatworkshops.io
 = OpenShift Virtualization Migration Demo
 
 This demo is geared for VMware administrators.
@@ -30,7 +31,7 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
-. Navigate to the https://{openshift_web_console}[OpenShift Console^]
+. Navigate to the link:{openshift_web_console}[OpenShift Console^]
 +
 . Login as administrator:
 * *Username:* {openshift_admin_user}
@@ -38,7 +39,7 @@ image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 +
 image::module-01/NN_Virtualization_Console_Login.png[link=self, window=blank, width=30%]
 
-. Navigate to the https://{aap_controller_web_url}[AAP Controller^]
+. Navigate to the link:{aap_controller_web_url}[AAP Controller^]
 +
 . Login as administrator:
 * *Username:* {aap_controller_admin_user}
