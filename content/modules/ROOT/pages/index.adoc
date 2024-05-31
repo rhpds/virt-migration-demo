@@ -26,8 +26,8 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 . Click *LAUNCH VSPHERE CLIENT*
 . Login with the following credentials:
-- *User:* {vcenter_user}
-- *Password:* {vcenter_password}
+* *User:* {vcenter_user}
+* *Password:* {vcenter_password}
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
