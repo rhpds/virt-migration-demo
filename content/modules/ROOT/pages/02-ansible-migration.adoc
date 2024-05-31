@@ -32,7 +32,7 @@ The manual process is effective and took us just a few minutes to prepare, how c
 
 *DO:*
 
-. Navigate to the https://{aap_controller_web_url}[AAP Controller^]
+. Navigate to the link:{aap_controller_web_url}[AAP Controller^]
 .. Log in if necessary:
 ====
 * *Username:* {aap_controller_admin_user}
@@ -69,7 +69,7 @@ We can now take a look at the migration Job template itself and see it's running
 
 . Click on *Jobs* on the left menu, and then click on the most recent run of *01 Migrate VMware VMs to OpenShift Virtualization*.
 
-. Navigate to the https://{openshift_web_console}[OpenShift Console^]
+. Navigate to the link:{openshift_web_console}[OpenShift Console^]
 
 . Select the appropriate *Project* that's the target of the migration.
 
