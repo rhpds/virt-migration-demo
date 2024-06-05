@@ -1,8 +1,6 @@
 = VM Migration with the Ansible Automation Platform
 
-*SAY:*
-
-In the previous module, you saw how easy it is to migrate VMs from VMware to OpenShift Virtualization using the Migration Toolkit for Virtualization.
+In the previous module, you saw how easy it is to migrate VMs from VMware to OpenShift Virtualization using the Migration Toolkit for Virtualization (MTV).
 
 While this process is effective and doesn’t take too long to complete, how can we speed up the process and achieve scale when needed?
 
@@ -14,21 +12,17 @@ Let me show you how easy it is to migrate from VMware to OpenShift Virtualizatio
 
 image::module-02/mtv_ansible_architecture_01.png[]
 
-Here we have an architectural diagram showcasing each phrase from day Zero to day two of the VM life cycle.
+Here, we have an architectural diagram showcasing each phase from Day 0 to Day 2 of the VM lifecycle.
 
-The focus today is on day one and how we can leverage the abilities of the Migration Toolkit for Virtualization and Ansible Automation Platform to simplify this process and automate the migration.
+The focus today is on Day 1 and how we can leverage the capabilities of the MTV and AAP to simplify and automate the migration process.
 
 // To start the migration first we need to determine what VMS we wish to migrate.
-
 // Within the vSphere client UI I've identified those as win web01 and win web 02.
-
 // The next thing I need to do is within the OpenShift web UI, I need to set up the prerequisites to have a successful migration.
-
 // This includes the provider, the virtual plan, and setting up the network and storage maps.
-
 // This is what that process looks like manually.  (Fast Forward)
 
-The manual process is effective and took us just a few minutes to prepare, how can we speed up this process and that scale when needed to do that we introduce Ansible Automation Platform to the mix?
+The manual process is effective and took us just a few minutes to prepare. However, how can we speed up this process and scale when needed? To achieve this, we introduce the Ansible Automation Platform to the mix.
 
 *DO:*
 
@@ -42,9 +36,11 @@ The manual process is effective and took us just a few minutes to prepare, how c
 . Click *Launch*.
 
 *SAY:*
-With our job template already in place that handles all the prerequisites all we need to do is answer a few simple questions in our fully customizable anable survey, such as the names of the VMS to migrate and we are often running.
 
-We've already migrated the database VM and the webserver, now let's migrate the failover webserver.
+The job template handles all the prerequisites, but we still need to answer some questions in our customizable Ansible survey, such as the names of the VMs we wish to migrate.
+
+WARNING: We need to choose a VM that has not been migrated yet. In the first module, we manually migrated the `database` and `winweb01` machines. So here, we will migrate the remaining VM: *winweb02*.
+
 *DO:*
 
 . Enter the name of the VM you would like to migrate into the Ansible survey.
@@ -57,8 +53,7 @@ winweb02
 
 . Click *Launch* to start the migration process.
 +
-TIP: The display might not refresh automatically.
-Refresh your browser to see the Ansible Job Output.
+TIP: The display might not refresh automatically. Refresh your browser to see the Ansible Job Output.
 
 *SAY:*
 
@@ -66,7 +61,7 @@ This time we can see the process just takes us a little less than 30 seconds to 
 
 image:module-02/migration_job_elapsed_time.png[]
 
-We can now take a look at the migration Job template itself and see it's running and setting up everything for us such as the provider creation the network and storage maps and even the virtual plan itself.
+We can now take a look at the migration job itself and see it running, setting up everything for us, such as the provider creation, the network and storage maps, and even the migration plan itself.
 
 *DO:*
 
@@ -74,56 +69,37 @@ We can now take a look at the migration Job template itself and see it's running
 
 . Navigate to the link:{openshift_web_console}[OpenShift Console^]
 
-//. Select the appropriate *Project* that's the target of the migration.
-
-. Click *Migration* in the left menu, and then click *Providers for Virtualization*.
+. Click *Migration* in the left menu, and then click *Plans for Virtualization*.
 
 image:module-02/ansible_migration_plan.png[]
 
 *SAY:*
 
-Now within the OpenShift UI you can see everything has been pre-created for us because of Ansible Automation Platform.
+Now, within the OpenShift Console, you can see that everything has been pre-created for us thanks to the Ansible Automation Platform.
+
+The migration plan is running while it migrates the `winweb02` VM from VMware.
 
 *DO:*
-
-Click on *Plans for Virtualization* on the left menu, and show how another migration plan has been created.
-
-*SAY:*
-
-This includes the virtual machines winweb01 and winweb02 and their corresponding IDs that are built into the virtual plan when we filled out the Ansible survey.
-
-*DO:*
-
-. Click on the *Plans for virtualization* on the left menu, and indicate the new plan created by AAP.
 
 . Click on the *NetworkMaps for virtualization* on the left menu, and indicate the new network map created by AAP.
 
 . Click on the *StorageMaps for virtualization* on the left menu, and indicate the new storage map created by AAP.
 
-. Return to the *Plans for virtualization* on the left menu, and click on the name of the `migration-plan`.
+. Return to the *Plans for virtualization* on the left menu, and click on `migration-plan`.
 
-. Click on the *YAML* tab, and highlight the names of the virtual machines to be migrated, on or about lines 65 through 90 in the YAML.
-
-*SAY:*
-
-The VM migration plan has already been Started for you.
-If you prefer, the Ansible Automation can simply set up these resources and rely on you to click the *Start* button.
-
-////
-*DO:*
-
-. Again click on *Plans for virtualization* on the left menu, and click the *Start* button on the right, and cofirm by clicking *Start* in the modal box that opens.
-////
+. Click on the *YAML* tab, and highlight the names of the virtual machines to be migrated (around lines 65 through 90 in the YAML).
 
 *SAY:*
 
-With AAP you have total control of how and what you want to automate not to mention the increased speed in reducing the number of manual steps taking away the human error element by automating your workflows and having consistency as you scale out your migration process.
+The VM migration plan has already been started for you, but if you prefer, you can setup the Ansible job to simply create the resources and rely on you to click the *Start* button.
+
+With the Ansible Automation Platform, you have total control over how and what you want to automate. Not to mention the increased speed and reduction in manual steps, which eliminates the element of human error. By automating your workflows, you ensure consistency as you scale out your migration process.
 
 == Summary
 
 *SAY:*
 
-In this demo, we used the Ansible Automation Platform to migrate our VMs to OpenShift Virtualization, bringing automation to the process and all the benefits that come with it: speed, scale, and consistency.
+In this demo, we used the AAP to migrate our VMs to OpenShift Virtualization, bringing automation to the process and all the benefits that come with it: speed, scale, and consistency.
 
 Furthermore, we can now easily integrate this process with other automation workflows and automate the lifecycle of your virtual machines.
 While Day 2 and Day 3 operations are not covered in this demo, there are separate resources available to assist you with those.

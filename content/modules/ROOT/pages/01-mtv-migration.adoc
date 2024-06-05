@@ -1,7 +1,5 @@
 = VM Migration with the Migration Toolkit for Virtualization
 
-*SAY:*
-
 OpenShift Virtualization includes a simple way to migrate your existing virtual machines from other hypervisors with the included Migration Toolkit for Virtualization (MTV).
 
 This demo highlights the migration of virtual machines from VMware vSphere to OpenShift.
