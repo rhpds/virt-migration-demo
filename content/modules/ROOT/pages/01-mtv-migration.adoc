@@ -26,13 +26,15 @@ This simple application consists of four virtual machines:
 NOTE: One benefit of migrating to OpenShift is that, if you have a simple loadbalancer configuration, you do not need to migrate the HAproxy VM (which acts as a load balancer).
 OpenShift already handles network traffic and load balancing natively, if desired.
 
-NOTE: We'll only migrate the database and ONE of the webservers, so we'll have one free to migrate automatically with Ansible in the next module.
 
 Now, we will navigate to the VMware vCenter and take note of the names of the virtual machines we want to migrate.
 
 * `database`
 * `winweb01`
 //* `winweb02`
+
+CAUTION: Only migrate the database and *ONE* of the webservers, so we'll have one free to migrate automatically with Ansible in the next module.
+We cannot migrate a virtual machine twice; mac addresses are not unique.
 
 *DO:*
 
