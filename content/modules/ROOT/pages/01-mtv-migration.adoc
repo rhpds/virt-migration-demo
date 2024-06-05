@@ -205,7 +205,7 @@ image::module-01/NN_VMs_Migrating_Details.png[link=self, window=blank, width=80%
 
 *SAY:*
 
-We can see here that two migrations have started, and one has not yet started.
+We can see here that one migration has started, and one has not yet started.
 
 NOTE: Yours may be different.
 In the case documented here, winweb01 and winweb02 are located on the same ESXi Host, and our system is configured to migrate only one VM at a time from any one ESXi Host.
@@ -235,7 +235,7 @@ image::module-01/NN_VM_Migration_Logs_View.png[link=self, window=blank, width=60
 
 *SAY:*
 
-Ok, so we don't have to sit here and watch 60GB traveling through the network, let us continue with an environment that we already migrated.
+Ok, so we don't have to sit here and watch 60GB traveling through the ne, let us continue with an environment that we already migrated.
 
 OpenShift separates work into different projects, and each project can have its own set of virtual machines.
 
