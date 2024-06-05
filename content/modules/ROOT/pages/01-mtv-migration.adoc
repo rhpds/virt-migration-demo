@@ -26,13 +26,26 @@ This simple application consists of four virtual machines:
 NOTE: One benefit of migrating to OpenShift is that, if you have a simple loadbalancer configuration, you do not need to migrate the HAproxy VM (which acts as a load balancer).
 OpenShift already handles network traffic and load balancing natively, if desired.
 
+NOTE: We'll only migrate the database and ONE of the webservers, so we'll have one free to migrate automatically with Ansible in the next module.
+
 Now, we will navigate to the VMware vCenter and take note of the names of the virtual machines we want to migrate.
 
 * `database`
 * `winweb01`
-* `winweb02`
+//* `winweb02`
 
 *DO:*
+
+. Navigate to the https://{vcenter_console}[vCenter Console^]
++
+image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
++
+. IF necesary, click *LAUNCH VSPHERE CLIENT*
+. Login with the following credentials:
+* *User:* {vcenter_user}
+* *Password:* {vcenter_password}
++
+image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
 . By default, you’ll land in the *Inventory* view at the top of the navigation tree.
 Click the *Workloads* icon and expand the navigation tree until you see the folder that matches your username and the four VMs under it.
@@ -109,11 +122,11 @@ The web console displays the concerns for each VM in the provider inventory.
 
 *DO:*
 
-. On the next page select the three VMs you would like to move:
+. On the next page select the two VMs you would like to move:
 
 * `database`
 * `winweb01`
-* `winweb02`
+//* `winweb02`
 
 WARNING: The VMs are far too large to migrate in this short demo.
 But that's OK, we have VMs that are already migrated to show after we've kicked off this migration process.
@@ -232,11 +245,12 @@ First we need to change to the project that contains our pre-migrated VMs.
 
 . Go to the Project: `vmimported`.
 
-. Start the `database` and `winweb01` VM from the drop-down menus next to the VMs names.
+//. Start the `database` and `winweb01` VM from the drop-down menus next to the VMs names.
+//. Start the `winweb01` VM from the drop-down menus next to the VMs names.
+//+
+//image::module-01/NN_Start_VMs.png[link=self, window=blank, width=100%]
 +
-image::module-01/NN_Start_VMs.png[link=self, window=blank, width=100%]
-+
-. Click on the `winweb01` VM that has started and click on its name to see the VM details page.
+. Click on the `winweb01` VM that is running and click on its name to see the VM details page.
 +
 image::module-01/NN_VM_Name.png[link=self, window=blank, width=40%]
 
@@ -272,14 +286,4 @@ image::module-01/NN_VM_Migrated_Application.png[link=self, window=blank, width=7
 
 *SAY:*
 
-In this demo, we used the Migration Toolkit for Virtualization to assist with the migration of existing virtual machines from a VMware vSphere environment to OpenShift Virtualization.
-
-In addition to the Migration Toolkit for Virtualization, there are three other migration toolkits.
-
-The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization’s needs.
-
-For more information about these other migration toolkits, please reach out to your Red Hat account team.
-
-*DO:*
-
-NOTE: Please delete this demo from the Red Hat Demo Platform as soon as you have completed practicing or delivering the demo to your customer.
+In this segment of the demo, we used the Migration Toolkit for Virtualization to assist with the migration of existing virtual machines from a VMware vSphere environment to OpenShift Virtualization.

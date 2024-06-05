@@ -44,12 +44,12 @@ The manual process is effective and took us just a few minutes to prepare, how c
 *SAY:*
 With our job template already in place that handles all the prerequisites all we need to do is answer a few simple questions in our fully customizable anable survey, such as the names of the VMS to migrate and we are often running.
 
+We've already migrated the database VM and the webserver, now let's migrate the failover webserver.
 *DO:*
 
-. Enter the names of the three VMs you would like to migrate into the Ansible survey.
+. Enter the name of the VM you would like to migrate into the Ansible survey.
 +
 ----
-winweb01
 winweb02
 ----
 
@@ -125,7 +125,14 @@ With AAP you have total control of how and what you want to automate not to ment
 
 In this demo, we used the Ansible Automation Platform to migrate our VMs to OpenShift Virtualization, bringing automation to the process and all the benefits that come with it: speed, scale, and consistency.
 
-Furthermore, we can now easily integrate this process with other automation workflows and automate the lifecycle of your virtual machines. While Day 2 and Day 3 operations are not covered in this demo, there are separate resources available to assist you with those.
+Furthermore, we can now easily integrate this process with other automation workflows and automate the lifecycle of your virtual machines.
+While Day 2 and Day 3 operations are not covered in this demo, there are separate resources available to assist you with those.
+
+In addition to the Migration Toolkit for Virtualization, there are three other migration toolkits.
+
+The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization’s needs.
+
+For more information about these other migration toolkits, please reach out to your Red Hat account team.
 
 *DO:*
 

@@ -20,7 +20,7 @@ This limits the steps you need to take to complete the demonstration and reduces
 
 *DO:*
 
-. Navigate to VMware vCenter: https://{vcenter_console}[vCenter Console^]
+. Navigate to the https://{vcenter_console}[vCenter Console^]
 +
 image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
