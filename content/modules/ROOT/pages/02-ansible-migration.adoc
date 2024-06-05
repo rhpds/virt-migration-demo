@@ -35,11 +35,14 @@ The manual process is effective and took us just a few minutes to prepare. Howev
 
 . Click *Launch*.
 
+image::module-02/01_ansible_migration_template_details.png[]
 *SAY:*
 
 The job template handles all the prerequisites, but we still need to answer some questions in our customizable Ansible survey, such as the names of the VMs we wish to migrate.
 
 WARNING: We need to choose a VM that has not been migrated yet. In the first module, we manually migrated the `database` and `winweb01` machines. So here, we will migrate the remaining VM: *winweb02*.
+
+image::module-02/01_ansible_migration_template_survey.png[]
 
 *DO:*
 
@@ -51,24 +54,24 @@ winweb02
 
 . Click *Next* to continue.
 
+image::module-02/01_ansible_migration_template_preview.png[]
+
 . Click *Launch* to start the migration process.
 +
 TIP: The display might not refresh automatically. Refresh your browser to see the Ansible Job Output.
+
+image::module-02/01_ansible_migration_job_output.png[]
 
 *SAY:*
 
 This time we can see the process just takes us a little less than 30 seconds to complete.
 
-image:module-02/migration_job_elapsed_time.png[]
-
 We can now take a look at the migration job itself and see it running, setting up everything for us, such as the provider creation, the network and storage maps, and even the migration plan itself.
 
 *DO:*
 
-. Click on *Jobs* on the left menu, and then click on the most recent run of *01 Migrate VMware VMs to OpenShift Virtualization*.
-
 . Navigate to the link:{openshift_web_console}[OpenShift Console^]
-
++
 . Click *Migration* in the left menu, and then click *Plans for Virtualization*.
 
 image:module-02/ansible_migration_plan.png[]
@@ -77,23 +80,25 @@ image:module-02/ansible_migration_plan.png[]
 
 Now, within the OpenShift Console, you can see that everything has been pre-created for us thanks to the Ansible Automation Platform.
 
-The migration plan is running while it migrates the `winweb02` VM from VMware.
-
 *DO:*
 
 . Click on the *NetworkMaps for virtualization* on the left menu, and indicate the new network map created by AAP.
 
 . Click on the *StorageMaps for virtualization* on the left menu, and indicate the new storage map created by AAP.
 
-. Return to the *Plans for virtualization* on the left menu, and click on `migration-plan`.
+. Return to the *Plans for virtualization* on the left menu, and *click on Start in the `migration-plan`*.
 
 . Click on the *YAML* tab, and highlight the names of the virtual machines to be migrated (around lines 65 through 90 in the YAML).
 
 *SAY:*
 
-The VM migration plan has already been started for you, but if you prefer, you can setup the Ansible job to simply create the resources and rely on you to click the *Start* button.
+We've started the VM migration plan, and the `winweb02` VM migration commences.
 
-With the Ansible Automation Platform, you have total control over how and what you want to automate. Not to mention the increased speed and reduction in manual steps, which eliminates the element of human error. By automating your workflows, you ensure consistency as you scale out your migration process.
+If you prefer, you can setup the Ansible job to automatically start the migration process, and not rely on you to click the *Start* button.
+
+With the Ansible Automation Platform, you have total control over how and what you want to automate.
+Not to mention the increased speed and reduction in manual steps, which eliminates the element of human error.
+By automating your workflows, you ensure consistency as you scale out your migration process.
 
 == Summary
 
