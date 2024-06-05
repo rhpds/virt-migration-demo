@@ -42,7 +42,7 @@ We cannot migrate a virtual machine twice; mac addresses are not unique.
 +
 image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
-. IF necesary, click *LAUNCH VSPHERE CLIENT*
+. If necesary, click *LAUNCH VSPHERE CLIENT*
 . Login with the following credentials:
 * *User:* {vcenter_user}
 * *Password:* {vcenter_password}
@@ -65,6 +65,10 @@ Check the operating system details by looking at the virtual machines.
 . Click `winweb01` in the list of virtual machines.
 +
 image::module-01/NN_vSphere_VM_Details.png[link=self, window=blank, width=100%]
+
+CAUTION:  *Do not start these VMware VMs.*
+We are not supporting "warm" migrations in this demo.
+If your customer wants you to start and investigate these VMS, you may do so but *must* stop the VMs before beginning migration.
 
 == Migration Toolkit for Virtualization
 
@@ -186,7 +190,7 @@ image::module-01/NN_Migration_Plan_Ready.png[link=self, window=blank, width=30%]
 +
 image::module-01/NN_Start_Migration_Modal.png[link=self, window=blank, width=50%]
 +
-. A progress bar will appear in the center of the screen along with the status of *0 of 3 VMs migrated*.
+. A progress bar will appear in the center of the screen along with the status of *0 of 2 VMs migrated*.
 +
 image::module-01/NN_Migration_Plan_Running.png[link=self, window=blank, width=50%]
 
@@ -197,7 +201,7 @@ So let's click on the progress bar to see the status of our migration.
 
 *DO:*
 
-. Click on the *0 of 3 VMs migrated* link and you will be presented with a page with more details about the migration process.
+. Click on the *0 of 2 VMs migrated* link and you will be presented with a page with more details about the migration process.
 +
 image::module-01/NN_VMs_Migrating_Details.png[link=self, window=blank, width=80%]
 
@@ -246,7 +250,7 @@ First we need to change to the project that contains our pre-migrated VMs.
 . Click on *Virtualization* in the left menu, and then on *Virtual Machines*.
 
 . Go to the Project: `vmimported`.
-
+//
 //. Start the `database` and `winweb01` VM from the drop-down menus next to the VMs names.
 //. Start the `winweb01` VM from the drop-down menus next to the VMs names.
 //+
