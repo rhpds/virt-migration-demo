@@ -29,7 +29,6 @@ Now, we will navigate to the VMware vCenter and take note of the names of the vi
 
 * `database`
 * `winweb01`
-//* `winweb02`
 
 CAUTION: Only migrate the database and *ONE* of the webservers, so we'll have one free to migrate automatically with Ansible in the next module.
 We cannot migrate a virtual machine twice; mac addresses are not unique.
@@ -47,7 +46,7 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 
-. By default, you’ll land in the *Inventory* view at the top of the navigation tree.
+. By default, you'll land in the *Inventory* view at the top of the navigation tree.
 Click the *Workloads* icon and expand the navigation tree until you see the folder that matches your username and the four VMs under it.
 Click the *VMs* tab at the top of the screen to view the VM details.
 +
@@ -72,11 +71,11 @@ If your customer wants you to start and investigate these VMS, you may do so but
 
 *SAY:*
 
-Let’s now look at how we’re going to migrate the virtual machines.
+Let's now look at how we're going to migrate the virtual machines.
 
 The Migration Toolkit for Virtualization has *Providers* that support various virtualization platforms.
 
-We’ll be using the VMware Provider as our migration source and the Host Provider as our migration target.
+We'll be using the VMware Provider as our migration source and the Host Provider as our migration target.
 
 Let's have a look at them now.
 
@@ -130,7 +129,6 @@ The web console displays the concerns for each VM in the provider inventory.
 
 * `database`
 * `winweb01`
-//* `winweb02`
 
 WARNING: The VMs are far too large to migrate in this short demo.
 But that's OK, we have VMs that are already migrated to show after we've kicked off this migration process.
@@ -205,10 +203,7 @@ image::module-01/NN_VMs_Migrating_Details.png[link=self, window=blank, width=80%
 
 *SAY:*
 
-We can see here that one migration has started, and one has not yet started.
-
-NOTE: Yours may be different.
-In the case documented here, winweb01 and winweb02 are located on the same ESXi Host, and our system is configured to migrate only one VM at a time from any one ESXi Host.
+We can see here that the migration has started.
 
 Now let's find out even more details about the specific stage of the migration process.
 
@@ -235,24 +230,20 @@ image::module-01/NN_VM_Migration_Logs_View.png[link=self, window=blank, width=60
 
 *SAY:*
 
-Ok, so we don't have to sit here and watch 60GB traveling through the ne, let us continue with an environment that we already migrated.
+OK, so we don't have to sit here and watch 60GB traveling through the network. Let's continue with an environment that we have already migrated.
 
 OpenShift separates work into different projects, and each project can have its own set of virtual machines.
 
-Let's look at one of the Windows VMs and connect to it to have a look.
+Let's look at one of the Windows VMs and connect to it to take a closer look.
 
-First we need to change to the project that contains our pre-migrated VMs.
+First, we need to switch to the project that contains our pre-migrated VMs.
 
 *DO:*
 
 . Click on *Virtualization* in the left menu, and then on *Virtual Machines*.
 
 . Go to the Project: `vmimported`.
-//
-//. Start the `database` and `winweb01` VM from the drop-down menus next to the VMs names.
-//. Start the `winweb01` VM from the drop-down menus next to the VMs names.
-//+
-//image::module-01/NN_Start_VMs.png[link=self, window=blank, width=100%]
+
 +
 . Click on the `winweb01` VM that is running and click on its name to see the VM details page.
 +
@@ -268,9 +259,9 @@ NOTE: You don't need to login, but if you wanted to, the password is `R3dh4t1!`
 
 What are applications good for if you can't connect to them?
 
-So let's look at the application migrated and exposed to our organization.
+So let's look at the application that has been migrated and exposed to our organization.
 
-For that, the we already create a "route", you can think of that like a DNS name or a loadbalancer...
+For that, we have already created a "route". You can think of this as similar to a DNS name or a load balancer.
 
 *DO:*
 
