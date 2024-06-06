@@ -2,7 +2,7 @@
 
 In the previous module, you saw how easy it is to migrate VMs from VMware to OpenShift Virtualization using the Migration Toolkit for Virtualization (MTV).
 
-While this process is effective and doesn’t take too long to complete, how can we speed up the process and achieve scale when needed?
+While this process is effective and doesn't take too long to complete, how can we speed up the process and achieve scale when needed?
 
 Here, we introduce Ansible Automation Platform (AAP) to the mix.
 
@@ -111,7 +111,7 @@ While Day 2 and Day 3 operations are not covered in this demo, there are separat
 
 In addition to the Migration Toolkit for Virtualization, there are three other migration toolkits.
 
-The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization’s needs.
+The combination of these can be used to move many types of workloads into and within OpenShift clusters depending on your organization's needs.
 
 For more information about these other migration toolkits, please reach out to your Red Hat account team.
 
