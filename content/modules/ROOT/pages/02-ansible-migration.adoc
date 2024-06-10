@@ -1,3 +1,5 @@
+:openshift_web_console: https://console-openshift-console.apps.slqsr.dynamic.redhatworkshops.io/
+
 = VM Migration with the Ansible Automation Platform
 
 In the previous module, you saw how easy it is to migrate VMs from VMware to OpenShift Virtualization using the Migration Toolkit for Virtualization (MTV).
@@ -33,12 +35,31 @@ The manual process is effective and took us just a few minutes to prepare. Howev
 
 . Click on *Templates* in the left menu, and then click on *01 Migrate VMware VMs to OpenShift Virtualization*.
 
+*SAY:*
+
+Ansible Automation Platform provides Templates to simplify interaction with the automation Jobs that automate your apps and systems.
+
+Here, we have the configuration of a template to migrate virtual machines.
+
+Of note, are the Inventory, which is the list and details of hosts known to the system and provided to the Template, as migration sources are targets.
+
+The Playbook is the actual Ansible code that drives the migration process.
+
+Other settings handle scale, reporting detail level, and credentials applied to this Template.
+
+*DO:*
+
 . Click *Launch*.
 
 image::module-02/01_ansible_migration_template_details.png[]
+
 *SAY:*
 
 The job template handles all the prerequisites, but we still need to answer some questions in our customizable Ansible survey, such as the names of the VMs we wish to migrate.
+
+Prepopulated here are the *Name of your provider?* which might be one of several if you have a very complex environment.
+
+The *Name of your migration plan*, *storage mapping*, and *network mapping* have been given defaults that you are encouraged to change.
 
 WARNING: We need to choose a VM that has not been migrated yet. In the first module, we manually migrated the `database` and `winweb01` machines. So here, we will migrate the remaining VM: *winweb02*.
 
@@ -70,9 +91,11 @@ We can now take a look at the migration job itself and see it running, setting u
 
 *DO:*
 
-. Navigate to the link:{openshift_web_console}[OpenShift Console^]
+. Navigate to the link:{openshift_web_console}++k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan++[OpenShift Console^]
 +
 . Click *Migration* in the left menu, and then click *Plans for Virtualization*.
+. Make sure you're in the `openshift-mtv` namespace.
+You might have to select *Show default projects* to access it.
 
 image:module-02/ansible_migration_plan.png[]
 
@@ -80,21 +103,23 @@ image:module-02/ansible_migration_plan.png[]
 
 Now, within the OpenShift Console, you can see that everything has been pre-created for us thanks to the Ansible Automation Platform.
 
+The migration has been been started for us, as well.
+
 *DO:*
 
 . Click on the *NetworkMaps for virtualization* on the left menu, and indicate the new network map created by AAP.
 
 . Click on the *StorageMaps for virtualization* on the left menu, and indicate the new storage map created by AAP.
 
-. Return to the *Plans for virtualization* on the left menu, and *click on Start in the `migration-plan`*.
+. Return to the *Plans for virtualization* on the left menu, and click on the  *`migration-plan`*.
 
 . Click on the *YAML* tab, and highlight the names of the virtual machines to be migrated (around lines 65 through 90 in the YAML).
 
 *SAY:*
 
-We've started the VM migration plan, and the `winweb02` VM migration commences.
+Ansible Automation Platform has started the VM migration plan, and the `winweb02` VM migration commences.
 
-If you prefer, you can setup the Ansible job to automatically start the migration process, and not rely on you to click the *Start* button.
+If you prefer, you can setup the Ansible job to only prepare the migration process, and rely on you to click the *Start* button.
 
 With the Ansible Automation Platform, you have total control over how and what you want to automate.
 Not to mention the increased speed and reduction in manual steps, which eliminates the element of human error.
