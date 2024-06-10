@@ -166,9 +166,19 @@ image::module-01/NN_Create_Migration_Plan_3.png[link=self, window=blank, width=8
 
 Now we wait a moment for our Migration Plan to be analysed by the system and ready to start the migration.
 
-TIP: Sometimes it takes a few minutes to create the plan.
-You can scroll down to the bottom of the page to show the *Conditions* and progress of plan preparation.
-You can also click through the tab bar on the top to show details about the required *Resources* for the migration have been computed.
+[Sidebar]
+****
+Sometimes it takes a few minutes to create the plan.
+Things to show while waiting for "Ready"
+
+. Scroll down to the bottom of the page to show the *Conditions* and progress of plan preparation.
+. Click through the tab bar on the top to show details about the required *Resources* for the migration have been computed.
+. Consider ESXi performance during migration:
+.. Click "Storage Maps for virtualization," select the map, and indicate how the `workload_share...` mapping is what matches in VMware.
+.. Click the "VMware provider" and show how easy it is to refer back to your vCenter
+.. Click the "Virtual Machines" tab in the Provider Details page and show how migrations need to be planned for ESXi host capabilities, noting that most often, ESXi hosts are not configured to allow more than one virtual machine to be migrated simultaneously per host.
+Migrating multiple VMs simultaneously from a single ESXi host are quite likely to cause severe performance degradation for the rest of the hosts on that ESXi host.
+****
 
 Let's start our migration!
 
@@ -274,6 +284,8 @@ For that, we have already created a "route". You can think of this as similar to
 image::module-01/NN_VM_Networking_Routes.png[link=self, window=blank, width=100%]
 +
 . The application should look something like this
++
+NOTE: OpenShift Route is providing load balancing between the *winweb01* and *winweb02* hosts, so you might see either hostname reported.
 +
 image::module-01/NN_VM_Migrated_Application.png[link=self, window=blank, width=70%]
 
