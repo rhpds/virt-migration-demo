@@ -97,6 +97,9 @@ We can now take a look at the migration job itself and see it running, setting u
 . Make sure you're in the `openshift-mtv` namespace.
 You might have to select *Show default projects* to access it.
 
+CAUTION: If you see a Start button, don't click it.
+Automation will catch up and start the migration for you.
+
 image:module-02/ansible_migration_plan.png[]
 
 *SAY:*
