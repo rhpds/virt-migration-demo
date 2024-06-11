@@ -24,7 +24,7 @@ The focus today is on Day 1 and how we can leverage the capabilities of the MTV 
 // This includes the provider, the virtual plan, and setting up the network and storage maps.
 // This is what that process looks like manually.  (Fast Forward)
 
-The manual process is effective and took us just a few minutes to prepare. However, how can we speed up this process and scale when needed? To achieve this, we introduce the Ansible Automation Platform to the mix.
+The manual process is efficient and only took a few minutes to complete. But how can we accelerate and scale this process when necessary? To address this, we incorporate the Ansible Automation Platform.
 
 *DO:*
 
