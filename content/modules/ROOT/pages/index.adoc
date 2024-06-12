@@ -26,7 +26,7 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 . Click *LAUNCH VSPHERE CLIENT*
 . Login with the following credentials:
-* *User:* {vcenter_user}
+* *User:* {vcenter_full_user}
 * *Password:* {vcenter_password}
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
@@ -34,7 +34,7 @@ image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
 . Navigate to the link:{openshift_web_console}[OpenShift Console^]
 +
 . Login as administrator:
-* *Username:* {openshift_admin_user}
+* *Username:* {openshift_admin_username}
 * *Password:* {openshift_admin_password}
 +
 image::module-01/NN_Virtualization_Console_Login.png[link=self, window=blank, width=30%]

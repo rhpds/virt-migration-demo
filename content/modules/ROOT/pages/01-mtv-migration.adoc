@@ -41,7 +41,7 @@ image::module-01/NN_Launch_vSphere.png[link=self, window=blank, width=30%]
 +
 . If necesary, click *LAUNCH VSPHERE CLIENT*
 . Login with the following credentials:
-* *User:* {vcenter_user}
+* *User:* {vcenter_full_user}
 * *Password:* {vcenter_password}
 +
 image::module-01/NN_vSphere_Login.png[link=self, window=blank, width=30%]
@@ -81,7 +81,7 @@ Let's have a look at them now.
 
 *DO:*
 
-. Navigate to the link:{openshift_web_console}[OpenShift Console^] and click *Migration* -> *Providers for virtualization*
+. Navigate to the link:{openshift_cluster_console_url}[OpenShift Console^] and click *Migration* -> *Providers for virtualization*
 
 image::module-01/NN_Migration_Providers.png[link=self, window=blank, width=80%]
 
@@ -105,7 +105,7 @@ First, we'll create a plan that indicates the source provider, *VMware* and the 
 
 . Navigate in the left menu to *Migration* -> *Plans for virtualization* and press *Create plan*.
 +
-link:{openshift_web_console}/k8s/ns/openshift-mtv/forklift.konveyor.io%7Ev1beta1~Plan[Link to Create Migration Plan^]
+link:{openshift_cluster_console_url}/k8s/ns/openshift-mtv/forklift.konveyor.io%7Ev1beta1~Plan[Link to Create Migration Plan^]
 +
 image::module-01/NN_Create_VMware_Plan.png[link=self, window=blank, width=100%]
 +
