@@ -91,7 +91,7 @@ We can now take a look at the migration job itself and see it running, setting u
 
 *DO:*
 
-. Navigate to the link:{openshift_cluster_console_url}++k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan++[OpenShift Console^]
+. Navigate to the link:{openshift_cluster_console_url}++/k8s/ns/openshift-mtv/forklift.konveyor.io~v1beta1~Plan++[OpenShift Console^]
 +
 . Click *Migration* in the left menu, and then click *Plans for Virtualization*.
 . Make sure you're in the `openshift-mtv` namespace.
