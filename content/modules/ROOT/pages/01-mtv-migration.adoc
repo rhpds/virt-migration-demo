@@ -265,7 +265,7 @@ On this page we can see many details about the VMs that have been migrated to Op
 
 image::module-01/NN_VM_Details.png[link=self, window=blank, width=100%]
 
-NOTE: You don't need to login, but if you wanted to, the password is `R3dh4t1!`
+NOTE: You don't need to login, but if you wanted to, the password is `1qazXSW@`
 
 What are applications good for if you can't connect to them?
 
