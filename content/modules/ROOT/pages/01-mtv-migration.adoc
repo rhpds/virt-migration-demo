@@ -265,7 +265,10 @@ On this page we can see many details about the VMs that have been migrated to Op
 
 image::module-01/NN_VM_Details.png[link=self, window=blank, width=100%]
 
-NOTE: You don't need to login, but if you wanted to, the password is `1qazXSW@`
+NOTE: This Windows Server is "Windows Core".
+https://learn.microsoft.com/en-us/windows-server/administration/server-core/what-is-server-core[More Info about Windows Core^]."
+There is no desktop, by default.
+You don't need to log in, but if you need to, the password is `1qazXSW@`
 
 What are applications good for if you can't connect to them?
 
