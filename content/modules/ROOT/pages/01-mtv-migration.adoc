@@ -85,6 +85,17 @@ Let's have a look at them now.
 
 image::module-01/NN_Migration_Providers.png[link=self, window=blank, width=80%]
 
+[Sidebar]
+****
+If you do not see the Providers, select the *openshift-mtv* Project by:
+
+. Click the *Projects* dropdown menu
+. Enter `mtv` into the search box
+. Enable *Show default projects*
+
+image::module-01/select-project-openshift-mtv.png[link=self, window=blank, width=30%]
+****
+
 *SAY:*
 
 Our list of providers contains two providers: *Host* and *VMware*.
@@ -150,6 +161,7 @@ We will give our plan a name, and make sure we're using the proper network maps 
 Please fill in your migration plan with the following values:
 
 * Plan name: *move-webapp-vmware*
+* Target Provider: *Host*
 * Network map: *Pod Networking*
 * Storage map: *ocs-storagecluster-ceph-rbd-virtualization*
 +
