@@ -7,20 +7,20 @@ nav:
 
 asciidoc:
   attributes:
-    openshift_admin_password: openshift_admin_password
-    openshift_admin_user: openshift_admin_user
-    openshift_web_console: openshift_web_console
-    vcenter_console: vcenter_console
-    vcenter_password: vcenter_password
-    vcenter_user: vcenter_user
-    aap_controller_web_url: aap_controller_web_url
-    aap_controller_admin_user: aap_controller_admin_user
-    aap_controller_admin_password: aap_controller_admin_password
+    openshift_admin_password: placehoder_openshift_admin_password
+    openshift_admin_user: placehoder_openshift_admin_user
+    openshift_web_console: placehoder_openshift_web_console
+    vcenter_console: placehoder_vcenter_console
+    vcenter_password: placehoder_vcenter_password
+    vcenter_user: placehoder_vcenter_user
+    vcenter_full_user: placeholder_vcenter_user
+    aap_controller_web_url: placeholder_aap_controller_web_url
+    aap_controller_admin_user: placeholder_aap_controller_admin_user
+    aap_controller_admin_password: placehoder_aap_controller_admin_password
     lab_name: "OpenShift Virtualization Migration Demo"
     release-version: master
     page-pagination: true
-    my_var: "foo"
     guid: my-guid
-    ssh_user: devops
-    ssh_password: devops
-    ssh_command: ssh devops@bastion.{guid}.example.opentlc.com
+    ssh_user: placeholder_ssh_username
+    ssh_password: placeholder_ssh_password
+    ssh_command: ssh placeholder@example.com
