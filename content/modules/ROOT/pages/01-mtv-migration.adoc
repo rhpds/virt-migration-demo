@@ -12,8 +12,7 @@ We will use the Migration Toolkit for Virtualization to migrate virtual machines
 
 A three-tier application has been deployed on VMware for us to migrate to OpenShift.
 
-//Application is offline until/if new VMs are created on IBM VSphere to host it.
-//The application is accessible from the following link: http://webapp.vc.opentlc.com/[WebApp^].
+The application is accessible from the following link: http://webapp.vc.redhatworkshops.io/[WebApp^].
 The application will display a visitor counter, and the hostname of the webserver that returned your request.
 
 This simple application consists of four virtual machines:
