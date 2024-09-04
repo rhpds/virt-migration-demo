@@ -1,5 +1,3 @@
-:openshift_web_console: https://console-openshift-console.apps.slqsr.dynamic.redhatworkshops.io/
-
 = VM Migration with the Ansible Automation Platform
 
 In the previous module, you saw how easy it is to migrate VMs from VMware to OpenShift Virtualization using the Migration Toolkit for Virtualization (MTV).
@@ -70,7 +68,7 @@ image::module-02/01_ansible_migration_template_survey.png[]
 . Enter the name of the VM you would like to migrate into the Ansible survey.
 +
 ----
-winweb02
+winweb02-{guid}
 ----
 
 . Click *Next* to continue.

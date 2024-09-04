@@ -27,8 +27,8 @@ OpenShift already handles network traffic and load balancing natively, if desire
 
 Now, we will navigate to the VMware vCenter and take note of the names of the virtual machines we want to migrate.
 
-* `database`
-* `winweb01`
+* `database-{guid}`
+* `winweb01-{guid}`
 
 CAUTION: Only migrate the database and *ONE* of the webservers, so we'll have one free to migrate automatically with Ansible in the next module.
 We cannot migrate a virtual machine twice; mac addresses are not unique.
@@ -138,8 +138,8 @@ The web console displays the concerns for each VM in the provider inventory.
 
 . On the next page select the two VMs you would like to move:
 
-* `database`
-* `winweb01`
+* `database-{guid}`
+* `winweb01-{guid}`
 
 WARNING: The VMs are far too large to migrate in this short demo.
 But that's OK, we have VMs that are already migrated to show after we've kicked off this migration process.
